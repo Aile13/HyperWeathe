@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/joho/godotenv"
 	"io/ioutil"
 	"log"
 	"math"
@@ -73,13 +72,15 @@ func initVettori() {
 }
 
 // Funzione che inizializza variabili d'ambiente
-func initEnvVar() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("errore caricamento variabili d'ambiente.")
-	}
-	APIkey = os.Getenv("APIkey")
-	CityCode = os.Getenv("CityCode")
+func initEnvVar() { /*
+		err := godotenv.Load()
+		if err != nil {
+			log.Fatal("errore caricamento variabili d'ambiente.")
+		}
+		APIkey = os.Getenv("APIkey")
+		CityCode = os.Getenv("CityCode")*/
+	APIkey = "cf51169f44b7396b0dc429be2021e0ee"
+	CityCode = "Passirano,it"
 }
 
 // Funzione per il calcolo della deviazione standard, per la pressione.
