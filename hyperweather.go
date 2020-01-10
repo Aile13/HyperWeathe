@@ -263,6 +263,9 @@ func main() {
 	// init varibili d'ambiente
 	initEnvVar()
 
+	// stampa messaggio
+	log.Printf(ProgramBanner + " is starting...")
+
 	// avvio go routine per previsioni meteo
 	go func() {
 		for {
