@@ -1,13 +1,6 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [
-		{
-			"checksumSHA1": "mu35XXlY1BmBIH8up31qq04/CZY=",
-			"path": "github.com/joho/godotenv",
-			"revision": "b09de681dcaff3eaeafcc62ee1f9f622a0c32b8b",
-			"revisionTime": "2019-10-20T20:25:22Z"
-		}
-	],
+	"package": [],
 	"rootPath": "HyperWeather"
 }

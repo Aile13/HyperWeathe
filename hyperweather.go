@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/joho/godotenv"
 	"io/ioutil"
 	"log"
 	"math"
@@ -74,10 +73,11 @@ func initVettori() {
 
 // Funzione che inizializza variabili d'ambiente
 func initEnvVar() {
+		/*
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatal("errore caricamento variabili d'ambiente.")
-		}
+		}*/
 		APIkey = os.Getenv("APIkey")
 		CityCode = os.Getenv("CityCode")
 }
