@@ -73,13 +73,13 @@ func initVettori() {
 
 // Funzione che inizializza variabili d'ambiente
 func initEnvVar() {
-		/*
+	/*
 		err := godotenv.Load()
 		if err != nil {
 			log.Fatal("errore caricamento variabili d'ambiente.")
 		}*/
-		APIkey = os.Getenv("APIkey")
-		CityCode = os.Getenv("CityCode")
+	APIkey = os.Getenv("APIkey")
+	CityCode = os.Getenv("CityCode")
 }
 
 // Funzione per il calcolo della deviazione standard, per la pressione.
@@ -127,10 +127,10 @@ func previsioneB() {
 	// var estr circa 5 ore
 	const estr int = 95
 
-	if vPressione[estr]-vPressione[FirstPos] > 3.5 ||
-		devStandard(estr) <= -4.0 ||
-		vUmidita[FirstPos]-vUmidita[estr] >= 20 ||
-		vTemperatura[estr]-vTemperatura[FirstPos] >= 2.0 ||
+	if vPressione[estr]-vPressione[FirstPos] > 3.5 &&
+		devStandard(estr) <= -4.0 &&
+		vUmidita[FirstPos]-vUmidita[estr] >= 20 &&
+		vTemperatura[estr]-vTemperatura[FirstPos] >= 2.0 &&
 		vCondizione[FirstPos] != vCondizione[estr] {
 
 		esitoB = true
@@ -146,7 +146,7 @@ func previsioneC() {
 	// var estr 24 ore
 	const estr = RequiredApiCalls - 1
 
-	if vPressione[estr]-vPressione[FirstPos] > 3.5 ||
+	if vPressione[estr]-vPressione[FirstPos] > 3.5 &&
 		devStandard(estr) <= 2.5 {
 
 		esitoC = true
