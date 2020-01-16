@@ -241,7 +241,9 @@ func aggiornaMessaggioMeteo(w http.ResponseWriter, r *http.Request) {
   - Condizioni: %s.`,
 		vPressione[0], vTemperatura[0], vUmidita[0], vCondizione[0])
 
-	fmt.Fprintf(w, "\n\nPrevisioni:\n")
+	if esitoA || esitoB || esitoC || esitoD {
+		fmt.Fprintf(w, "\n\nPrevisioni:\n")
+	}
 	if esitoA {
 		fmt.Fprintf(w, " - Temporale entro un'ora.\n")
 	}
